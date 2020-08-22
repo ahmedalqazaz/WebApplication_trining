@@ -1,0 +1,87 @@
+﻿@model IEnumerable<WebApplication_trining.Models.tbl_news>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/shared/_MainLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-stripped table-bordered table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.news_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.title_news)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.news_desc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.news_img1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.news_img2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.news_img3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.news_img4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.news_category)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date_news)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.news_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.title_news)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.news_desc)
+        </td>
+        
+        <td>
+            <img src="~/Uploads/@Html.DisplayFor(Model=>item.news_img1)" class="thumbnail"
+                 style="width:48px; height:48px;" />
+        </td>
+        <td>
+            <img src="~/Uploads/@Html.DisplayFor(Model=>item.news_img2)" class="thumbnail"
+                 style="width:48px; height:48px;" />
+        </td>
+        <td>
+            <img src="~/Uploads/@Html.DisplayFor(Model=>item.news_img3)" class="thumbnail"
+                 style="width:48px; height:48px;" />
+        </td>
+        <td>
+            <img src="~/Uploads/@Html.DisplayFor(Model=>item.news_img4)" class="thumbnail"
+                 style="width:48px; height:48px;" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.news_category)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date_news)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

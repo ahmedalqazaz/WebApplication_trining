@@ -1,0 +1,97 @@
+﻿@model WebApplication_trining.Models.tbl_news
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/shared/_MainLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tbl_news</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.news_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.news_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.title_news)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.title_news)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.news_desc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.news_desc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.news_img1)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(Model=>Model.news_img1)" class="thumbnail"
+                 style="width:48px; height:48px;"/>
+            
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.news_img2)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(Model=>Model.news_img2)" class="thumbnail"
+                 style="width:48px; height:48px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.news_img3)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(Model=>Model.news_img3)" class="thumbnail"
+                 style="width:48px; height:48px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.news_img4)
+        </dt>
+
+        <dd>
+            <img src="~/Uploads/@Html.DisplayFor(Model=>Model.news_img4)" class="thumbnail"
+                 style="width:48px; height:48px;" />
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.news_category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.news_category)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.date_news)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.date_news)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

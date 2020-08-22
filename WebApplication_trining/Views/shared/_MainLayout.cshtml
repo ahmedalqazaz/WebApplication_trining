@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+   
+    <meta name="viewport" content="width=device-width,initial scale=1" />
+    <title>@ViewBag.Title</title>
+    
+
+    <link href="~/content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/content/Style.css" rel="stylesheet" />
+</head>
+<body>  
+    <nav class="navbar navbar-default navbar-fixed-top">
+
+        <div class="container">
+          
+            <div class="navbar-header">
+                <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <h3 class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" style="border-width:0px; margin-left:25px; color:#ffffff; font-size:20px; font-family:myfont3; "> المديرية العامة للتدريب والتأهيل</h3>
+                <a href="~/Home" class="navbar-brand">
+                
+                    <img class="logosize" src="~/image/w1e.png"  />
+                </a>
+
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+
+                    <li>
+                         <a href="~/Home">
+                             <i class="glyphicon glyphicon-home"></i>
+                             الرئيسية
+
+                         </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="glyphicon glyphicon-folder-open"></i>
+                            اقسام المديرية
+
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="~/Home/About">
+                            <i class="glyphicon glyphicon-info-sign"></i>
+                            حول الموقع
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="~/Home/Contact">
+                            <i class="glyphicon glyphicon-envelope"></i>
+                            اتصل بنا
+
+                        </a>
+                    </li>
+
+
+
+                </ul>
+
+              <!--partail-->
+                @Html.Partial("_login")
+
+            </div>
+
+
+        </div>
+        
+    </nav>
+      
+    
+   
+        <!---navbar-->
+    <div class="container">
+        <div class="row" style="min-height:550px;">
+            @RenderBody()
+        </div>
+       
+    </div>
+
+
+   
+
+   
+      
+        <!---footerr-->
+
+
+
+    <footer class="myfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-question-sign"></i>
+                        من نحن؟
+                    </h3>
+                    <p>
+                        السلام عليكم ورحمة الله وبركاته تسعدنا زيارتكم لنا على موقع المديرية العامة للتدريب والتاهيل يتم نشر جميع الاخبار والنشاطات الخاصة بنا  
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-globe"></i>
+                       روابط مهمة
+                    </h3>
+                   <ul>
+                       <li><a href="https://moi.gov.iq/">موقع وزارة الداخلية</a></li>
+                       <li><a href="https://moi.gov.iq/index.php?name=Pages&op=page&pid=106">موقع وكالة الوزارة للشؤون الادارية والمالية</a></li>
+                       <li><a href="https://www.moi-jobs.iq/">موقع مديرية التطوع</a></li>
+                      
+                   </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>
+                        <i class="glyphicon glyphicon-envelope"></i>
+                       خدمات الالكترونية
+                    </h3>
+                    <ul>
+                        <li><a href="http://www.nid-moi.gov.iq/">البطاقة الوطنية الموحدة</a></li>
+                        <li><a href="https://addla.unp.app/">المنصة الوطنية الموحدة</a></li>
+                        <li><a href="https://www.itp.gov.iq/fines">الغرامات المرورية</a></li>
+                       
+                    </ul>
+                </div>
+
+            </div>
+            
+        </div>    
+        <div class="subfooter">
+            <span>جميع الحقوق محفوظة لموقع المديرية العامة للتدريب والتاهيل 2020</span>
+        </div>
+    </footer>
+
+        <script src="~/scripts/jquery.js"></script>
+        <script src="~/scripts/jquery.bxslider.js"></script>
+        <script src="~/scripts/bootstrap.min.js"></script>
+   
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿@model WebApplication_trining.Models.tbl_news
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/shared/_MainLayout.cshtml";
+}
+
+
+
+<div class="jumbotron">
+    <h2>@Html.DisplayFor(model => model.news_name)</h2>
+    <h3>@Html.DisplayFor(model => model.title_news)</h3>
+   
+</div>
+
+    <div class="row">
+
+
+
+        <div class="col-md-3">
+            <img src="~/Uploads/@Html.DisplayFor(Model=>Model.news_img1)" class="thumbnail"
+                 style="width:200px; height:200px;" />
+        </div>
+
+
+
+
+        <div class="col-md-3">
+
+            <img src="~/Uploads/@Html.DisplayFor(Model=>Model.news_img2)" class="thumbnail"
+                 style="width:200px; height:200px;" />
+        </div>
+        <div class="col-md-3">
+            <img src="~/Uploads/@Html.DisplayFor(Model=>Model.news_img3)" class="thumbnail"
+                 style="width:200px; height:200px;" />
+        </div>
+        <div class="col-md-3">
+            <img src="~/Uploads/@Html.DisplayFor(Model=>Model.news_img4)" class="thumbnail"
+                 style="width:200px; height:200px;" />
+        </div>
+    </div>
+
+
+    <div class="jumbotron">
+
+        <h3 style="font-family:myfont3">@Html.DisplayFor(model => model.news_desc)</h3>
+    </div>
+
+    <p>
+        @Html.ActionLink("العودة الى الرئيسية", "Index", null, new { @class = "btn btn-primary" })
+    </p>
