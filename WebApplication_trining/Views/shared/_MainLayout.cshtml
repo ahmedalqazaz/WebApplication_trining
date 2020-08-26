@@ -8,7 +8,8 @@
     
 
     <link href="~/content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/content/Style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="content/style.css">
+    @*<link href="~/content/Style.css" rel="stylesheet" />*@
 </head>
 <body> 
     <img src="~/image/as.jpg" style="width:100%;height:270px"/>
@@ -40,13 +41,26 @@
 
                          </a>
                     </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-folder-open"></i>
-                            اقسام المديرية
 
-                        </a>
-                    </li>
+                    <li>
+                         
+                            <div class="dropdown">
+                                <button class="dropbtn" style="background-color:  rgba(0, 0, 0, 0.00);"><i class="glyphicon glyphicon-globe">اقسام المديرية<span class="arrow" style="color:white;padding-right:10px">&#9660;</span></i></button>
+                               
+                                <div class="dropdown-content">
+                                    <a href="#">مديرية الالعاب البدنية والعاب الشرطة</a>
+                                    <a href="#">مديرية مركز تاهيل الشرطة</a>
+                                    <a href="#">مركز القيم المهنية و حقوق الانسان</a>
+                                    <a href="#">معهد التدريب النسوي</a>
+                                    <a href="#">مركز التدريب المتقدم</a>
+                                    <a href="#">مركز اعداد و تاهيل القادة</a>
+                                    <a href="#">مديرية الادارية و المالية</a>
+                                </div>
+                              
+                            </div>
+
+
+                       </li>
 
                     <li>
                         <a href="~/Home/About">
