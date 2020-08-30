@@ -46,5 +46,11 @@ namespace WebApplication1.Controllers
 
             return View();
         }
+        public ActionResult Dep()
+        {
+            ViewBag.Message = "اقسام مديرية التدريب و التاهيل";
+
+            return View(db.tbl_news.ToList());
+        }
     }
 }

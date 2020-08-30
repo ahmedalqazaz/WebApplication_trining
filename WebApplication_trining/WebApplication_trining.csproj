@@ -194,6 +194,8 @@
     <Content Include="content\bootstrap.min.css" />
     <Content Include="content\font.css" />
     <Content Include="content\Style.css" />
+    <Content Include="content\tree_maker-min.css" />
+    <Content Include="content\tree_maker.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="image\1.jpg" />
@@ -203,7 +205,10 @@
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="scripts\bootstrap.min.js" />
+    <Content Include="scripts\gulpfile.js" />
     <Content Include="scripts\jquery.js" />
+    <Content Include="scripts\tree_maker-min.js" />
+    <Content Include="scripts\tree_maker.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -295,6 +300,7 @@
     <Content Include="Views\Home\Details.cshtml" />
     <None Include="Properties\PublishProfiles\belal22.pubxml" />
     <None Include="Properties\PublishProfiles\belalweb.pubxml" />
+    <Content Include="Views\Home\Dep.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
